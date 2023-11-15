@@ -1,0 +1,45 @@
+---
+import ArraySizeSlider from "../components/ArraySizeSlider";
+import RandomizeButton from "./RandomizeButton";
+import SortButton from "./SortButton";
+import AlgoSelector from "./AlgoSelector";
+import SpeedSlider from "./SpeedSlider";
+---
+
+<div class="sidebar place-content-between min-w-[30%]">
+  <h1 class="text-6xl pb-8">Algorithm Visualizer</h1>
+  <SortButton client:load />
+  <RandomizeButton client:load />
+  <section>
+    <label
+      for="algorithm"
+      class="text-2xl block mb-2 font-medium text-gray-900 dark:text-white"
+      >Choose Algorithm:</label
+    >
+
+    <AlgoSelector client:load />
+  </section>
+
+  <ArraySizeSlider client:load />
+
+  <section>
+    <label for="speed" class="block text-xl py-1">Speed:</label>
+    <SpeedSlider client:load />
+  </section>
+</div>
+
+<style>
+  .sidebar {
+    background-color: #0f0f0f;
+    height: 100%;
+    width: 20%;
+    color: white;
+    padding: 20px;
+  }
+
+  .button,
+  select,
+  input {
+    margin-bottom: 10px;
+  }
+</style>
