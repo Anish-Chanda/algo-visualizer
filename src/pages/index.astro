@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SideBar from "../components/SideBar.astro";
+import SortVisualizer from "../components/sort-visualizer";
+---
+
+<Layout title="Algorith Visualizer 🚀">
+  <main class="flex">
+    <SideBar />
+    <SortVisualizer client:load/>
+  </main>
+</Layout>
+
+<style>
+  html,
+  body,
+  main {
+    height: 100%;
+    margin: 0;
+  }
+</style>
