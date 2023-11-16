@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { $arraySize } from "../stores/SliderValStore";
+import { $runStatus } from "../stores/StatusStore";
 import { useStore } from "@nanostores/react";
 
 const ArraySizeSlider = () => {
