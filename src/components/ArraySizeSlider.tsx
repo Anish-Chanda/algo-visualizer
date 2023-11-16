@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { $arraySize } from "../stores/SliderValStore";
+import { useStore } from "@nanostores/react";
 
 const ArraySizeSlider = () => {
   const [val, setVal] = useState<number>(10);
@@ -15,6 +16,8 @@ const ArraySizeSlider = () => {
     $arraySize.set(val);
   };
 
+  const runStatus = useStore($runStatus);
+
   return (
     <section>
       <label htmlFor="arraySize" className="block text-xl py-1">
@@ -26,8 +29,9 @@ const ArraySizeSlider = () => {
         min="5"
         max="30"
         value={val}
-        className="accent-green-700 cursor-pointer w-full"
+        className="accent-green-700 cursor-pointer w-full disabled:opacity-50"
         onChange={handleChange}
+        disabled={runStatus}
       />
     </section>
   );
