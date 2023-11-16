@@ -25,7 +25,7 @@ const SortVisualizer = () => {
   }, [arraySize]);
 
   return (
-    <div className="flex mx-9">
+    <div className="flex px-9 bg-zinc-900">
       {bars.map((bar, index) => (
         <div
           className="justify-center flex max-w-[10%]"
