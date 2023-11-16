@@ -1,3 +1,3 @@
 import { atom } from "nanostores";
 
-export const $selectedAlgo = atom("Merge");
+export const $selectedAlgo = atom("merge");
