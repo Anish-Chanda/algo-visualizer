@@ -91,8 +91,8 @@ export const QuickSort = async (
   // Delay for visualization
   await new Promise((resolve) => setTimeout(resolve, speed));
 
-  QuickSort(arr, lowIndex, leftPointer - 1);
-  QuickSort(arr, leftPointer + 1, highIndex);
+  await QuickSort(arr, lowIndex, leftPointer - 1);
+  await QuickSort(arr, leftPointer + 1, highIndex);
 
   await new Promise((resolve) => setTimeout(resolve, speed));
 };
